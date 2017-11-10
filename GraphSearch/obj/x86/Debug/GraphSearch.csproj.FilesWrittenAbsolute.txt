@@ -1,0 +1,9 @@
+/Users/mac/Projects/GraphSearch/GraphSearch/obj/x86/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/Geohash.dll
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/Geohash.dll.mdb
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/GraphSearch.exe.mdb
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/GraphSearch.exe
+/Users/mac/Projects/GraphSearch/GraphSearch/obj/x86/Debug/GraphSearch.exe
+/Users/mac/Projects/GraphSearch/GraphSearch/obj/x86/Debug/GraphSearch.exe.mdb
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/astar.cs.dll
+/Users/mac/Projects/GraphSearch/GraphSearch/bin/Debug/astar.cs.dll.mdb
