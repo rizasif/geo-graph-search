@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphSearch", "GraphSearch\GraphSearch.csproj", "{404DF6B0-7A68-4884-BCAC-5AFF69F7D37C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "astar", "astar", "{72B453FF-87A7-465B-8C19-BB0EFBAD9E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "astar.cs", "..\..\Documents\C-Sharp-Projects\astar.cs\astar.cs.csproj", "{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "geohash-net", "..\..\Documents\C-Sharp-Projects\geohash-net\geohash-net\geohash-net.csproj", "{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{404DF6B0-7A68-4884-BCAC-5AFF69F7D37C}.Debug|x86.ActiveCfg = Debug|x86
+		{404DF6B0-7A68-4884-BCAC-5AFF69F7D37C}.Debug|x86.Build.0 = Debug|x86
+		{404DF6B0-7A68-4884-BCAC-5AFF69F7D37C}.Release|x86.ActiveCfg = Release|x86
+		{404DF6B0-7A68-4884-BCAC-5AFF69F7D37C}.Release|x86.Build.0 = Release|x86
+		{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}.Release|x86.Build.0 = Release|Any CPU
+		{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF21B9A4-56E9-4109-9C2B-BDA6104DF659} = {72B453FF-87A7-465B-8C19-BB0EFBAD9E80}
+		{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69} = {72B453FF-87A7-465B-8C19-BB0EFBAD9E80}
+	EndGlobalSection
+EndGlobal

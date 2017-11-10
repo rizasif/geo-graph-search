@@ -1,0 +1,5 @@
+GraphSearch/bin
+GraphSearch/obj
+*.suo
+*.bak
+*.vscode
