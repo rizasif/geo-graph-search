@@ -8,10 +8,10 @@ namespace GraphSearch
 	{
 		static int Main(string[] args)
 		{
-			GraphTest.buildGraphTest();
-			GraphTest.getFirstChildTest();
+//			GraphTest.buildGraphTest();
+//			GraphTest.getFirstChildTest();
 			SearchTest.searchGraph();
-			GraphTest.duplicateTest();
+//			GraphTest.duplicateTest();
 			return 0;
 		}
 
@@ -83,7 +83,8 @@ namespace GraphSearch
 
 				Console.Out.WriteLine("Node Count: " + mGraph.count);
 
-				var astar = new AStar.AStar(mGraph.Start, new Node(39.662327, 77.045718));
+				Node.GoalCriteria = 0.300;
+				var astar = new AStar.AStar(mGraph.Start, new Node(33.662327, 73.045718));
 
 				var result = astar.Run();
 

@@ -16,7 +16,7 @@ namespace GraphSearch
 		/// Static range in which a node can be declared as goal.
 		/// Unit = Meters
 		/// </summary>
-		public static double GoalCriteria = 30.0;
+		public static double GoalCriteria = 0.300;
 
 		/// <summary>
 		/// Empty node with all essential values null and inactive.
@@ -136,20 +136,22 @@ namespace GraphSearch
 
 			double dist = Helper.distFrom(g.Lat, g.Lng, Lat, Lng);
 
-			// if(LeftChild != null)
-			// 	distLeft = Helper.distFrom(g.Lat, g.Lng, LeftChild.Lat, LeftChild.Lng);
-			
-			// if(RightChild != null)
-			// 	distRight = Helper.distFrom(g.Lat, g.Lng, RightChild.Lat, RightChild.Lng);
-				
-			// if(distLeft == max_cost && distRight == max_cost) // Node has no child
-			// 	return true;
-			// else if(distRight > dist && distLeft > dist) // Childeren are away from goal
-			// 	return true;
-			// else
-			// 	return false;
+			if (dist <= GoalCriteria) 
+			{
+				double distLeft = max_cost, distRight = max_cost;
+				if(LeftChild != null)
+					distLeft = Helper.distFrom(g.Lat, g.Lng, LeftChild.Lat, LeftChild.Lng);
 
-			return dist < GoalCriteria;
+				if(RightChild != null)
+					distRight = Helper.distFrom(g.Lat, g.Lng, RightChild.Lat, RightChild.Lng);	
+
+				 if(distLeft == max_cost && distRight == max_cost) // Node has no child
+				 	return true;
+				 else if(distRight > dist && distLeft > dist) // Childeren are away from goal
+				 	return true;
+			}
+
+			return false;
         }
 
         public bool IsOpenList(IEnumerable<INode> openList)
