@@ -83,8 +83,8 @@ namespace GraphSearch
 
 				Console.Out.WriteLine("Node Count: " + mGraph.count);
 
-				Node.GoalCriteria = 0.300;
-				var astar = new AStar.AStar(mGraph.Start, new Node(33.662327, 73.045718));
+				Node.GoalCriteria = 30.0;//0.300;
+				var astar = new AStar.AStar(mGraph.Start, new Node(33.6623885, 73.0457975));
 
 				var result = astar.Run();
 
