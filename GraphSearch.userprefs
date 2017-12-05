@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="GraphSearch/GraphSearch.csproj">
+﻿<Properties StartupItem="GraphSearch\GraphSearch.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GraphSearch/astar.cs/AStar.cs">
     <Files>
@@ -10,4 +10,8 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>..\..\Documents\C-Sharp-Projects\geohash-net\geohash-net\geohash-net.csproj</String>
+    <String>..\..\Documents\C-Sharp-Projects\astar.cs\astar.cs.csproj</String>
+  </DisabledProjects>
 </Properties>

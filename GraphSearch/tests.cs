@@ -10,8 +10,9 @@ namespace GraphSearch
 		{
 //			GraphTest.buildGraphTest();
 //			GraphTest.getFirstChildTest();
-			SearchTest.searchGraph();
+			//SearchTest.searchGraph();
 //			GraphTest.duplicateTest();
+			SearchTest.searchGraphTwice();
 			return 0;
 		}
 
@@ -83,7 +84,7 @@ namespace GraphSearch
 
 				Console.Out.WriteLine("Node Count: " + mGraph.count);
 
-				Node.GoalCriteria = 30.0;//0.300;
+				Node.GoalCriteria = 0.300;
 				var astar = new AStar.AStar(mGraph.Start, new Node(33.6623885, 73.0457975));
 
 				var result = astar.Run();
@@ -91,6 +92,52 @@ namespace GraphSearch
 				Console.Out.WriteLine(result);
 
 				Print (astar.GetPath ());
+
+				Console.ReadLine();
+			}
+
+			public static void searchGraphTwice()
+			{
+				double [] lats = {33.662315, 33.662394, 33.662376, 33.662383, 33.662327, 33.662372, 33.662388, 33.662361, 33.662379};
+				double [] lngs = {73.045756, 73.045739, 73.045750, 73.045755, 73.045718, 73.045742, 73.045797, 73.045733, 73.045754};
+
+				Graph mGraph = new Graph();
+
+				for(int i=0; i< 9; i++)
+				{
+					mGraph.append(new Node(lats[i], lngs[i]));
+				}
+
+				Console.Out.WriteLine("Node Count: " + mGraph.count);
+
+				Node.GoalCriteria = 0.300;
+				var astar = new AStar.AStar(mGraph.Start, new Node(33.6623885, 73.0457975));
+
+				var result = astar.Run();
+
+				Console.Out.WriteLine(result);
+
+				Print (astar.GetPath ());
+				Console.Out.WriteLine (mGraph.Start.LeftChild.Lng);
+
+
+				Console.Out.WriteLine ("2 iteration");
+
+				mGraph.refresh ();
+
+				Console.Out.WriteLine("Node Count: " + mGraph.count);
+				Node.GoalCriteria = 0.300;
+
+				var astar2 = new AStar.AStar(mGraph.Start, new Node(33.6623885, 73.0457975));
+				//astar.Reset(mGraph.Start, new Node(33.6623885, 73.0457975));
+
+				var result2 = astar2.Run();
+
+				Console.Out.WriteLine(result2);
+				Console.Out.WriteLine("Steps: " + astar2.Steps);
+
+				Print (astar2.GetPath ());
+				Console.Out.WriteLine (mGraph.Start.LeftChild.Lng);
 
 				Console.ReadLine();
 			}

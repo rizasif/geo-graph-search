@@ -77,6 +77,19 @@ namespace GraphSearch
 		}
 
 		/// <summary>
+		/// Resets the nodes in graph to untouched state
+		/// </summary>
+		public void refresh()
+		{
+			foreach(KeyValuePair<string, Node> entry in NodeList)
+			{
+				// do something with entry.Value or entry.Key
+				entry.Value.SetOpenList(false);
+				entry.Value.SetClosedList (false);
+			}
+		}
+
+		/// <summary>
 		/// Add a node to the graph.
 		/// The first node added into an empty graph will be declared as Start.
 		/// Ignores existing ids (GeoHash).

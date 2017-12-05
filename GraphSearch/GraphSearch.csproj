@@ -43,13 +43,13 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Documents\C-Sharp-Projects\geohash-net\geohash-net\geohash-net.csproj">
-      <Project>{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}</Project>
-      <Name>geohash-net</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Documents\C-Sharp-Projects\astar.cs\astar.cs.csproj">
+    <ProjectReference Include="astar.cs\astar.cs.csproj">
       <Project>{BF21B9A4-56E9-4109-9C2B-BDA6104DF659}</Project>
       <Name>astar.cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="geohash-net\geohash-net\geohash-net.csproj">
+      <Project>{EE9D2C45-287E-4AC9-AF0C-D3D0C50EBD69}</Project>
+      <Name>geohash-net</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
