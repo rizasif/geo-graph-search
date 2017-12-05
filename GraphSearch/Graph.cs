@@ -94,20 +94,52 @@ namespace GraphSearch
 							//The new node is smaller than bud
 							//hence go right
 							if (bud.RightChild == null) {
+								//Right Child of bud is null 
+								//place new node there
 								node.Parent = bud;
 								bud.RightChild = node;
 								break;
-							} else {
+							} 
+							else if(String.Compare (bud.RightChild.id, node.id) < 0){
+								//Right Child of bud is smaller than new node
+								//Replace the right child with new node
+								node.RightChild = bud.RightChild;
+								node.Parent = bud;
+								
+								node.RightChild.Parent = node;
+								bud.RightChild = node;
+
+								NodeList [node.RightChild.id] = node.RightChild;
+								break;
+							}
+							else {
+								//Need to iterate further
 								bud = NodeList [bud.RightChild.id];
 							}
 						} else {
 							//The new node is greater than bud
 							//hence go left
 							if (bud.LeftChild == null) {
+								//Left Child of bud is null 
+								//place new node there
 								node.Parent = bud;
 								bud.LeftChild = node;
 								break;
-							} else {
+							} 
+							else if(String.Compare (bud.LeftChild.id, node.id) > 0){
+								//Left Child of bud is larger than new node
+								//Replace the left child with new node
+								node.LeftChild = bud.LeftChild;
+								node.Parent = bud;
+								
+								node.LeftChild.Parent = node;
+								bud.LeftChild = node;
+
+								NodeList [node.LeftChild.id] = node.LeftChild;
+								break;
+							}
+							else {
+								//Need to iterate further
 								bud = NodeList [bud.LeftChild.id];
 							}
 						}
