@@ -126,7 +126,7 @@ namespace GraphSearch
 				mGraph.refresh ();
 
 				Console.Out.WriteLine("Node Count: " + mGraph.count);
-				Node.GoalCriteria = 0.300;
+				//Node.GoalCriteria = 0.300;
 
 				var astar2 = new AStar.AStar(mGraph.Start, new Node(33.6623885, 73.0457975));
 				//astar.Reset(mGraph.Start, new Node(33.6623885, 73.0457975));

@@ -77,13 +77,12 @@ namespace GraphSearch
 		}
 
 		/// <summary>
-		/// Resets the nodes in graph to untouched state
+		/// Resets all the nodes in graph to untouched state
 		/// </summary>
 		public void refresh()
 		{
 			foreach(KeyValuePair<string, Node> entry in NodeList)
 			{
-				// do something with entry.Value or entry.Key
 				entry.Value.SetOpenList(false);
 				entry.Value.SetClosedList (false);
 			}
